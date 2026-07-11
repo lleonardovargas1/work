@@ -1,0 +1,176 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #f5f7ff, #e8fdf1);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+#tela-login {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    max-width: 430px;
+    margin: 90px auto;
+}
+
+#input-nome {
+    padding: 10px;
+    font-size: 1.05em;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+#btn-entrar, #btn-reset, #btn-limpar-banco {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#link-curiosidades {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1a73e8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#link-curiosidades:hover {
+    text-decoration: underline;
+}
+
+#btn-entrar:hover, #btn-reset:hover, #btn-limpar-banco:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#btn-entrar, #btn-reset {
+    background: #00d46a;
+    color: #052c16;
+}
+
+#layout-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#coluna-jogo, #coluna-banco {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+#tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.celula {
+    width: 100px;
+    height: 100px;
+    background: #fafafa;
+    border: 2px solid #333;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.celula:hover {
+    transform: scale(1.03);
+}
+
+.celula.vencedora {
+    background: #fff4b3;
+    border-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+#placar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: #222;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#info-treino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+#btn-reset-nivel {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ff8a00;
+    color: white;
+    cursor: pointer;
+}
+
+#ponto-humano { color: #00d46a; }
+#ponto-ia { color: #ff5a5f; }
+
+#status {
+    min-height: 28px;
+    font-weight: bold;
+    color: #444;
+}
+
+#status.vitoria { color: #0f9d58; }
+#status.derrota { color: #d93025; }
+#status.empate { color: #f39c12; }
+
+#btn-limpar-banco {
+    background-color: #ff5a5f;
+    color: white;
+    margin-bottom: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 320px;
+    background: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #444;
+    color: white;
+}

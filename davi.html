@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo da Velha - IA</title>
+    <link rel="stylesheet" href="davi.css">
+</head>
+<body>
+    <div id="tela-login">
+        <h2>Digite seu nome para iniciar o experimento:</h2>
+        <input type="text" id="input-nome" placeholder="Seu nome aqui..." autocomplete="off">
+        <button onclick="iniciarJogoComNome()" id="btn-entrar">Entrar no Jogo</button>
+        <br><br>
+        <a href="curiosidades.html" id="link-curiosidades">📚 Ver curiosidades sobre IA</a>
+    </div>
+
+    <div id="conteudo-jogo" style="display: none;">
+        <h1 id="titulo-jogador">Jogador: Davi</h1>
+
+        <div id="layout-principal">
+            <div id="coluna-jogo">
+                <div id="placar">
+                    <div><span id="nome-placar-humano">Você</span>: <span id="ponto-humano">0</span></div>
+                    <div>IA: <span id="ponto-ia">0</span></div>
+                </div>
+                <div id="info-treino">
+                    <span id="nivel-ia">Nível da IA: 1</span>
+                    <button onclick="reiniciarTreinamento()" id="btn-reset-nivel">Limpar Nível</button>
+                </div>
+
+                <div id="tabuleiro">
+                    <div class="celula" onclick="jogar(0)"></div>
+                    <div class="celula" onclick="jogar(1)"></div>
+                    <div class="celula" onclick="jogar(2)"></div>
+                    <div class="celula" onclick="jogar(3)"></div>
+                    <div class="celula" onclick="jogar(4)"></div>
+                    <div class="celula" onclick="jogar(5)"></div>
+                    <div class="celula" onclick="jogar(6)"></div>
+                    <div class="celula" onclick="jogar(7)"></div>
+                    <div class="celula" onclick="jogar(8)"></div>
+                </div>
+
+                <h2 id="status">Sorteando quem começa...</h2>
+                <button onclick="reiniciarRodada()" id="btn-reset" style="display:none;">Próxima Rodada</button>
+            </div>
+
+            <div id="coluna-banco">
+                <h3>💾 Banco de Dados Local (localStorage)</h3>
+                <button onclick="limparHistoricoDoBanco()" id="btn-limpar-banco">Limpar Histórico</button>
+                <table id="tabela-historico">
+                    <thead>
+                        <tr>
+                            <th>Rodada</th>
+                            <th>Jogador</th>
+                            <th>Resultado</th>
+                            <th>Placar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="davi%20(1)%20(1).js"></script>
+</body>
+</html>
